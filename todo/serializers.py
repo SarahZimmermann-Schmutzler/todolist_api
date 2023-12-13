@@ -11,4 +11,6 @@ class TodoSerializer(serializers.HyperlinkedModelSerializer):
     user = UserSerializer()
     class Meta:
         model = Todo
-        fields = ['id', 'title', 'description', 'created_at', 'user']
+        fields = ['id', 'title', 'description', 'created_at', 'user', 'time_passed']
+        # user wird über eigenen Serializer definiert
+        # time_passed ist eine Funktion, die wir Model mitgeben
